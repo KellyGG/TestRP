@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Kelly\\Angular-cv\\TestRP\\TestRP.csproj": {}
+    "D:\\Kelly\\Angular-cv\\RP\\TestRP\\TestRP.csproj": {}
   },
   "projects": {
-    "D:\\Kelly\\Angular-cv\\TestRP\\TestRP.csproj": {
+    "D:\\Kelly\\Angular-cv\\RP\\TestRP\\TestRP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Kelly\\Angular-cv\\TestRP\\TestRP.csproj",
+        "projectUniqueName": "D:\\Kelly\\Angular-cv\\RP\\TestRP\\TestRP.csproj",
         "projectName": "TestRP",
-        "projectPath": "D:\\Kelly\\Angular-cv\\TestRP\\TestRP.csproj",
+        "projectPath": "D:\\Kelly\\Angular-cv\\RP\\TestRP\\TestRP.csproj",
         "packagesPath": "C:\\Users\\kelly.garzon\\.nuget\\packages\\",
-        "outputPath": "D:\\Kelly\\Angular-cv\\TestRP\\obj\\",
+        "outputPath": "D:\\Kelly\\Angular-cv\\RP\\TestRP\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
