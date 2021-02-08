@@ -1,9 +1,9 @@
 <h1 mat-dialog-title><strong>{{action}} Product</strong></h1>
 <div mat-dialog-content>
-  <mat-form-field *ngIf="action != 'Delete'; else elseTemplate">
+  <mat-form-field *ngIf="action != 'Delete'">
     <input placeholder="Name" matInput [(ngModel)]="local_data.name">    
   </mat-form-field>
-  <mat-form-field *ngIf="action != 'Delete'; else elseTemplate">
+  <mat-form-field *ngIf="action != 'Delete'">
     <input placeholder="Description" matInput [(ngModel)]="local_data.description">  
   </mat-form-field>
   <div *ngIf="action == 'Delete'">Are you sure you want to delete "{{local_data.name}}"?</div>  

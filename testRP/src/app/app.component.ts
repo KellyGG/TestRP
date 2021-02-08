@@ -1,7 +1,7 @@
 import { Component, ViewChild, Inject } from '@angular/core';
 import { MatDialog, MatTable } from '@angular/material';
 import { DialogBoxComponent } from './dialog-box/dialog-box.component';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 export interface UsersData {
   name: string;
@@ -14,14 +14,24 @@ export interface UsersData {
 })
 
 export class AppComponent {
-  displayedColumns: string[] = ['name', 'description'];
+  displayedColumns: string[] = ['id','name', 'description'];
   dataSource: any;  
   public product: Product;
   @ViewChild(MatTable,{static:true}) table: MatTable<any>;
 
   constructor(public dialog: MatDialog, public http: HttpClient, @Inject('BASE_URL') public baseUrl: string) {
-    http.get<Product[]>(baseUrl + 'api/Product').subscribe(result => {
+    const headerDict = {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'Access-Control-Allow-Headers': 'Content-Type',
+    }
+    
+    const requestOptions = {                                                                                                                                                                                 
+      headers: new HttpHeaders(headerDict), 
+    };
+    http.get<Product[]>(baseUrl + 'api/Product',requestOptions).subscribe(result => {
        this.dataSource = result;
+       console.log("inside constructor get",result);
     }, error => console.error(error));
   }
 

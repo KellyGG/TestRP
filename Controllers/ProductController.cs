@@ -95,7 +95,10 @@ namespace TestRP.Controllers
             {
 
             var productEdit = _dbContext.ProductAll.First (x => x.Id == value.Id);
+            
+            if(value.Name!=null)
             productEdit.Name=value.Name;
+            if(value.Description!=null)
             productEdit.Description=value.Description;
  
             _dbContext.SaveChanges();

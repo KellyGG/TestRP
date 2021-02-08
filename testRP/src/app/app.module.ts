@@ -50,7 +50,7 @@ import {
   entryComponents: [
     DialogBoxComponent
   ],
-  providers: [],
+  providers: [{ provide: "BASE_URL", useValue: "http://localhost:5000/"}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
